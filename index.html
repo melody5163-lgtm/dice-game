@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>擲骰子小遊戲</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="scoreboard" aria-label="分數板">
+        <div>
+          <p class="label">玩家</p>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="round">
+          <p class="label">回合</p>
+          <strong id="roundNumber">1</strong>
+        </div>
+        <div>
+          <p class="label">電腦</p>
+          <strong id="cpuScore">0</strong>
+        </div>
+      </section>
+
+      <section class="table" aria-label="骰子桌">
+        <div class="dice-zone">
+          <article class="side">
+            <p class="side-name">玩家</p>
+            <div id="playerDie" class="die face-1" aria-label="玩家骰子點數 1">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+          </article>
+
+          <div id="resultBadge" class="result-badge">先到 5 分獲勝</div>
+
+          <article class="side">
+            <p class="side-name">電腦</p>
+            <div id="cpuDie" class="die face-1" aria-label="電腦骰子點數 1">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="遊戲操作">
+        <button id="rollButton" type="button">擲骰</button>
+        <button id="resetButton" class="secondary" type="button">重來</button>
+      </section>
+
+      <p id="message" class="message" aria-live="polite">
+        按下擲骰，點數大的拿 1 分。
+      </p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
